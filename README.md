@@ -1,1 +1,1 @@
-cpitu-bank-app
+cpitu_bank_app
