@@ -1,4 +1,6 @@
 <?php
+include_once("dbConnect.php");
+$db = new DB;
 include_once("header.php");
 ?>
 <div>
@@ -15,6 +17,12 @@ include_once("header.php");
 </div>
 <div>
     <?php
+    $sql = "INSERT INTO `kunder` (`name`, `birthday`, `address`, `zipcode`, `city`, `phone`, `email`) VALUES (:name, :birthday, :address, :zipcode, :city, :phone, :email);";
+    $values = [
+        [":name", $_REQUEST['name']],
+        [":birthday", $_REQUEST['birthday']],
+    ];
+    $db->query($sql, $values);
     if(!empty($_REQUEST['name'])) {
         ?>
         Navn: <?php echo $_REQUEST['name']; ?><br />
