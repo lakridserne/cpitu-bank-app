@@ -4,7 +4,7 @@ $db = new DB;
 include_once("header.php");
 ?>
 <div>
-    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         Navn: <input type="text" name="name" /><br />
         Fødselsdato: <input type="text" name="birthday" /><br />
         Adresse: <input type="text" name="address" /><br />
