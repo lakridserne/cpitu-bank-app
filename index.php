@@ -21,6 +21,11 @@ include_once("header.php");
     $values = [
         [":name", $_REQUEST['name']],
         [":birthday", $_REQUEST['birthday']],
+        [":address", $_REQUEST['address']],
+        [":zipcode", $_REQUEST['zipcode']],
+        [":city", $_REQUEST['city']],
+        [":phone", $_REQUEST['phone']],
+        [":email", $_REQUEST['email']],
     ];
     $db->query($sql, $values);
     if(!empty($_REQUEST['name'])) {
